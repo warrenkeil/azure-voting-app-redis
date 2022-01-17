@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test shell script'){
             steps{
-                sh(script:'Hi from shell script')
+                sh(script:'echo "Hi from shell script"')
             }
         }
         stage('Docker Build'){
