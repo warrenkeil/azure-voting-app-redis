@@ -12,6 +12,11 @@ pipeline {
                 sh(script:'echo "Hi from shell script"')
             }
         }
+        stage('Test docker command'){
+            steps{
+                sh(script: 'docker ps')
+            }
+        }
         stage('Docker Build'){
             steps{
                 sh(script: 'docker images -a')
