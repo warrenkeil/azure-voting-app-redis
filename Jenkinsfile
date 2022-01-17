@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Verify Branch') {
             steps {
-                echo "wtf"
+                echo "$GIT_BRANCH"
             }
         }
     }
