@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test docker command'){
             steps{
-                sh(script: 'docker images -a')
+                sh(script: 'docker ps')
             }
         }
         stage('Docker Build'){
