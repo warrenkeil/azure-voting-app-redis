@@ -11,6 +11,9 @@ pipeline {
             steps{
                 sh(script:'echo "Hi from shell script"')
             }
+            steps{
+                sh'echo $PATH'
+            }
         }
         stage('Docker Build'){
             steps{
