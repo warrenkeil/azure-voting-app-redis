@@ -12,14 +12,8 @@ pipeline {
                 sh(script:'echo "Hi from shell script"')
             }
         }
-        stage('Test docker command'){
-            steps{
-                sh '''docker ps'''
-            }
-        }
         stage('Docker Build'){
             steps{
-                sh'docker images -a'
                 sh(script: """
                 cd azure-vote/
                 docker images -a
